@@ -19,7 +19,7 @@ def  test_playwrightshortcut(page:Page):
     page.get_by_role("link",name="terms and conditions").click()
     page.get_by_role("button",name="Sign In").click()
     # expect(page.get_by_text("Incorrect username/password.")).to_be_visible()
-
+#test
 #launching firefox browser in playwright (using plawright object from playwright class package )
 # def test_firefoxbrowser(playwright: playwright):
 #     firefoxbrowser= playwright.firefox.launch(headless=False)
