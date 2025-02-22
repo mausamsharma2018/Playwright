@@ -12,5 +12,5 @@ COPY . .
 RUN python -m playwright install
 RUN python -m playwright install-deps
 
-# Default command to run Playwright tests
+# Default command to run Playwright tests.
 CMD ["pytest", "--browser=chromium"]
