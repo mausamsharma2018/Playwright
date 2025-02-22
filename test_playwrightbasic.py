@@ -39,7 +39,7 @@ def  test_playwrightshortcut(page:Page):
     expect(page.get_by_text("Nokia Edge")).to_be_visible()
 
 
-
+#a different function/method
 def test_ChildWindow(page:Page):
     page.goto("https://rahulshettyacademy.com/loginpagePractise/")
     with page.expect_popup() as newpage_info:
