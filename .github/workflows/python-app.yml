@@ -29,7 +29,7 @@ jobs:
       run: |
         sudo apt-get update && sudo apt-get install -y curl wget unzip
         sudo apt-get install -y libnss3 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
-        libxcomposite1 libxrandr2 libasound2 libpangocairo-1.0-0 libxdamage1 \
+        libxcomposite1 libxrandr2 libpangocairo-1.0-0 libxdamage1 \
         libgbm-dev libpango-1.0-0 libxshmfence1 libgtk-3-0 xvfb
     - name: Install Python dependencies
       run: |
