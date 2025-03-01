@@ -51,7 +51,7 @@ jobs:
           sudo apt-get install -y powershell
           pwsh -Command "Install-Module -Name Pester -Force -Scope CurrentUser"
 
-    - name: Run Pester Tests
+    - name: Run PesterApi Tests
       run: pwsh -Command "Invoke-Pester -Path ./PesterApiCheck.tests.ps1"
     - name: Test with pytest
       run: |
