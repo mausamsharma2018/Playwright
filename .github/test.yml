@@ -13,7 +13,7 @@ jobs:
     runs-on: windows-latest   # GitHub will run on a Windows machine
 
     steps:
-    # Checkout the repository
+    # Checkout the repository content
     - name: Checkout Repository
       uses: actions/checkout@v2
 
