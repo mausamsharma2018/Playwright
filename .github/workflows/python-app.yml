@@ -18,7 +18,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -59,6 +60,13 @@ jobs:
 
     - name: Run Playwright Tests in Docker
       run: docker run --rm playwright-tests
+
+    - name: Install Pester module
+      run: |
+        sudo apt-get install -y powershell
+        pwsh -Command "Install-Module -Name Pester -Force -Scope CurrentUser"
+    - name: Run Pester Tests
+      run:  pwsh -Command "Invoke-Pester -Path ./PesterApiCheck.tests.ps1"
     - name: Test with pytest
       run: |
         pytest
