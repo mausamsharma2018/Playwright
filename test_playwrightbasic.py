@@ -1,5 +1,5 @@
 import playwright
-from playwright.sync_api import expect, Page
+from playwright.async_api import expect, Page
 
 
 # def test_playwrightbasic(playwright):

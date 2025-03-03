@@ -1,5 +1,5 @@
 import playwright.sync_api
-from playwright.sync_api import Playwright
+from playwright.async_api import Playwright
 
 
 fakePayloadOrderResponse= {"data":[],"message":"No Orders"}
