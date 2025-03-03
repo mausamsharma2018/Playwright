@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     apt-get clean
 
 
+# Install playwright,python dependencies
 COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
@@ -26,5 +27,5 @@ RUN python -m playwright install --with-deps
 RUN python -m playwright install chromium
 
 # Default command to run Playwright tests.
-CMD ["pytest", "--browser=chromium"]
+#CMD ["pytest", "--browser=chromium"]
 #USER root  # Ensures you have root privileges

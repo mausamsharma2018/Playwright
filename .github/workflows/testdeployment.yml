@@ -1,0 +1,16 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Pre-built Docker Image
+        run: docker pull mausam868/playwright-python-tests:latest  # Pull from Docker Hub
+
+      - name: Run Tests Inside Pre-built Docker Image
+        run: docker run --rm mausam868/playwright-python-tests pytest --browser=chromium

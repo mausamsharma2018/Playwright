@@ -1,3 +1,6 @@
+#This will only re-build when there’s a change in the repo.
+#If nothing has changed, the pre-built image remains the same.
+#GitHub Actions does not build the image every time you run tests—only when needed.
 name: Build and Push Docker Image
 
 on:
