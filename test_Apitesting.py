@@ -2,7 +2,7 @@ import json
 import time
 
 import pytest
-from playwright.sync_api import Page, Playwright, expect
+from playwright.async_api import Page, Playwright, expect
 from pytest_playwright.pytest_playwright import playwright, page
 
 from apiBase import Apiutils
